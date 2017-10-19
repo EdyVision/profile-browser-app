@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "1.5.0",
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react-native": "^3.1.0",
     "jest-expo": "^21.0.2",
+    "react-native-scripts": "1.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -25,8 +29,11 @@
     "react": "16.0.0-alpha.12",
     "react-native": "^0.48.4",
     "react-native-image-slider": "^1.1.5",
+    "react-native-paginated-listview": "^1.0.2",
+    "react-native-parsed-text": "0.0.20",
     "react-native-photo-grid": "0.0.2",
     "react-native-snap-carousel": "^3.3.4",
+    "react-native-swipeable-parallax-carousel": "^1.1.0",
     "react-native-swiper": "^1.5.13"
   }
 }
