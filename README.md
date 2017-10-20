@@ -3,9 +3,9 @@
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 ## Screen Captures
-<img src="https://github.com/RavenCode/profile-browser-app/blob/master/screenshots/screenshot_1.PNG" alt="appFirstHalf">
+<img src="https://github.com/RavenCode/profile-browser-app/blob/master/screenshots/screenshot_1.PNG" alt="appFirstHalf" height="450px" width="250px">
 
-<img src="https://github.com/RavenCode/profile-browser-app/blob/master/screenshots/screenshot_2.PNG" alt="appSecondHalf">
+<img src="https://github.com/RavenCode/profile-browser-app/blob/master/screenshots/screenshot_2.PNG" alt="appSecondHalf" height="450px" width="250px">
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
