@@ -1,6 +1,7 @@
 /**
  * User Bio Block
  * Sets up user profile image, name, and description block at top of screen
+ *
  * @author Edmary Rosado
  */
 
@@ -43,9 +44,9 @@ export default class UserBlock extends React.Component {
             <Text style = { styles.userName }>{ this.state.userProfileInformation.name }</Text>
           </View>
           <View style = { styles.readMoreText } >
-            <Text numberOfLines = { this.state.showTruncated ? this.state.maxNumberOfLines : null } 
+            <Text numberOfLines = { this.state.showTruncated ? this.state.maxNumberOfLines : null }
               onReady = { this._handleTextReady } style = { styles.cardText }>
-              <ParsedText 
+              <ParsedText
                 style = { styles.cardText }
                 parse = {
                   [
@@ -68,11 +69,10 @@ export default class UserBlock extends React.Component {
           >
             <Text style = { styles.button }>
               { this.state.showTruncated ? 'Read more' : 'Show Less' }
-            </Text> 
+            </Text>
           </TouchableHighlight>
         </View>
       </View>
     )
-    
   }
 }

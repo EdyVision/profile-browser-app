@@ -5,7 +5,7 @@
     "ecmaFeatures": {
       "jsx"           : true,
       "spread"        : true,
-      "destructuring" : true,
+      "destructuring" : true
     }
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
@@ -31,6 +31,7 @@
     "no-else-return"          : [1],
     "no-extend-native"        : [2],
     "no-eval"                 : [2],
+    "no-trailing-spaces"      : [2, {"skipBlankLines": false}],
     "no-floating-decimal"     : [2],
     "no-implied-eval"         : [2],
     "no-invalid-this"         : [2],

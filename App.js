@@ -1,3 +1,7 @@
+/**
+ * @author Edmary Rosado
+ */
+
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Container, Content, Header, Title, Body } from 'native-base'
@@ -20,9 +24,9 @@ export default class App extends Component {
           </Body>
         </Header>
         <Content>
-          <View style={{padding: 10}}></View>
+          <View style={{ padding: 10 }}></View>
           <UserBlock />
-          <View style={{ borderBottomColor: 'gray', borderBottomWidth: 0.5}}></View>
+          <View style={{ borderBottomColor: 'gray', borderBottomWidth: 0.5 }}></View>
           <UserImageSlider />
           <UserGallery />
         </Content>

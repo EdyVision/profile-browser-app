@@ -27,19 +27,19 @@ module.exports = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   paginationDot: {
-    backgroundColor: 'rgba(0,0,0,.2)', 
+    backgroundColor: 'rgba(0,0,0,.2)',
     width: 15,
     height: 15,
-    borderRadius: 7.5, 
-    marginLeft: 8, 
+    borderRadius: 7.5,
+    marginLeft: 8,
     marginRight: 8
   },
   activePaginationDot: {
-    backgroundColor: '#40beeb', 
-    width: 15, 
-    height: 15, 
-    borderRadius: 7.5, 
-    marginLeft: 8, 
+    backgroundColor: '#40beeb',
+    width: 15,
+    height: 15,
+    borderRadius: 7.5,
+    marginLeft: 8,
     marginRight: 8
   },
   sliderPagination: {

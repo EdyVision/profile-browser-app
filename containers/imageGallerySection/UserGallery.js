@@ -1,6 +1,7 @@
 /**
  * User Image Gallery 
  * Sets up 3x18 grid of images for single user
+ *
  * @author Edmary Rosado
  */
 

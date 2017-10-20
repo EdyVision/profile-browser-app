@@ -1,11 +1,12 @@
 /**
  * User Image Slider 
  * Sets up image swipeable slider with up to 5 images
+ *
  * @author Edmary Rosado
  */
 
 import React from 'react'
-import { View, Image, Text } from 'react-native'
+import { View, Image } from 'react-native'
 import Swiper from 'react-native-swiper'
 import { getSliderImages } from '../../actions/pumpUpActions'
 
@@ -32,7 +33,7 @@ export default class UserGallery extends React.Component {
         <Image key={index} source = {{ uri: image.imagePath }} style = { styles.sliderImage } />
       )
     })
-    
+
     return slides
   }
   async componentDidMount() {

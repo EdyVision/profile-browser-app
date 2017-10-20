@@ -2,11 +2,11 @@ import config from '../config'
 
 /**
  * @return {*} profileInformation
- * @param {*} userProfileId 
+ * @param {*} userProfileId
  */
 export async function getProfileInformation(userProfileId) {
   let profileInformation = {}
-  
+
   await fetch('http://api.pumpup.com/1/classes/User/' + userProfileId, {
     method: 'POST',
     headers: {
@@ -22,13 +22,13 @@ export async function getProfileInformation(userProfileId) {
     .then((responseJson) => {
       let bioLineItems = responseJson.bio.split('\n')
       let formattedBio = ''
-      
+
       bioLineItems.forEach(function(line) {
         if (line !== '' || line !== '\n') {
           formattedBio += line + ' '
         }
       })
-      
+
       profileInformation = {
         name: responseJson.name,
         bio: formattedBio.toString(),
@@ -43,8 +43,8 @@ export async function getProfileInformation(userProfileId) {
 
 /**
  * @return {*} sliderImages[]
- * @param {*} userId 
- * @param {*} maxUserImages 
+ * @param {*} userId
+ * @param {*} maxUserImages
  */
 export async function getSliderImages(userId, maxUserImages) {
   let sliderImages = []
@@ -65,7 +65,7 @@ export async function getSliderImages(userId, maxUserImages) {
   })
     .then((response) => response.json())
     .then((responseJson) => {
-      
+
       responseJson.result.posts.forEach(function(post){
         let postItem = {
           id: post.objectId,
@@ -82,7 +82,7 @@ export async function getSliderImages(userId, maxUserImages) {
 
 /**
  * @return {*} imageSources[]
- * @param {*} maxUserImages 
+ * @param {*} maxUserImages
  */
 export async function getGalleryImages(maxUserImages) {
   let imageSources = []
