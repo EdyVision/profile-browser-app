@@ -32,8 +32,10 @@
     "react-native-paginated-listview": "^1.0.2",
     "react-native-parsed-text": "0.0.20",
     "react-native-photo-grid": "0.0.2",
+    "react-native-router-flux": "^4.0.0-beta.22",
     "react-native-snap-carousel": "^3.3.4",
     "react-native-swipeable-parallax-carousel": "^1.1.0",
-    "react-native-swiper": "^1.5.13"
+    "react-native-swiper": "^1.5.13",
+    "react-redux": "^5.0.6"
   }
 }

@@ -7,43 +7,25 @@
 import React from 'react'
 import PhotoGrid from 'react-native-photo-grid'
 import { Image, TouchableOpacity } from 'react-native'
+import { getGalleryImages } from '../../actions/pumpUpActions'
+
+const MAX_USER_IMAGES = 18
 
 export default class UserGallery extends React.Component {
   constructor() {
     super()
     this.state = { imageSources: [] }
   }
-  componentDidMount() {
-    let imageSources = []
-
-    // Retrieve collection of user images
-    return fetch('http://api.pumpup.com/1/functions/feed/popular/load-batch', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        'isThumbnailsOnly': true,
-        'limit': 18,
-        '_method': 'POST',
-        '_version': '5.0.5',
-        '_SessionToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOjI3MDc3OTgsImV4cCI6MTUzOTUzNTI1OTM2OH0.UK2qP1yk9QLk_Bkx1Ly0RPaitRYtec8ojZhzYRc0D-g'
-      })
-    })
-      .then((response) => response.json())
-      .then((responseJson) => {
-        responseJson.result.posts.forEach(function(post){
-          let postItem = {
-            id: post.objectId,
-            src: post.thumbnail
-          }
-          imageSources.push(postItem)
-        })
-
-        this.setState({ imageSources })
-      }).catch((error) => {
-        console.log(error)
-      })
+  getUserGalleryImages(maxNumberImages) {
+    return getGalleryImages(maxNumberImages)
+  }
+  async componentDidMount() {
+    try {
+      const results = await this.getUserGalleryImages(MAX_USER_IMAGES)
+      this.setState({ imageSources: results })
+    } catch (e) {
+      console.log(e)
+    }
   }
   render() {
     return(
@@ -56,7 +38,6 @@ export default class UserGallery extends React.Component {
     )
   }
 
-
   renderItem(item, itemSize) {
     return(
       <TouchableOpacity
@@ -67,7 +48,7 @@ export default class UserGallery extends React.Component {
         }}>
         <Image
           resizeMode = "cover"
-          style = {{ flex: 1, margin: 1 }}
+          style = {{ flex: 1, margin: 0.25 }}
           source = {{ uri: item.src }}
         />
       </TouchableOpacity>
